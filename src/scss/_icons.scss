@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "aleksandrovskaya";
+    src:url("../fonts/aleksandrovskaya.eot");
+    src:url("../fonts/aleksandrovskaya.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/aleksandrovskaya.woff") format("woff"),
+    url("../fonts/aleksandrovskaya.ttf") format("truetype"),
+    url("../fonts/aleksandrovskaya.svg#aleksandrovskaya") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[data-icon]:before {
+    font-family: "aleksandrovskaya" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "aleksandrovskaya" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+    content: "\61";
+}
+.icon-bath:before {
+    content: "\62";
+}
+.icon-check:before {
+    content: "\63";
+}
+.icon-close:before {
+    content: "\64";
+}
+.icon-double-bed:before {
+    content: "\65";
+}
+.icon-education:before {
+    content: "\66";
+}
+.icon-floor-plan:before {
+    content: "\67";
+}
+.icon-home:before {
+    content: "\68";
+}
+.icon-kids:before {
+    content: "\69";
+}
+.icon-left:before {
+    content: "\6a";
+}
+.icon-parking:before {
+    content: "\6b";
+}
+.icon-pipeline:before {
+    content: "\6c";
+}
+.icon-right:before {
+    content: "\6d";
+}
+.icon-slide:before {
+    content: "\6e";
+}
+.icon-square:before {
+    content: "\6f";
+}
+.icon-stairs:before {
+    content: "\70";
+}

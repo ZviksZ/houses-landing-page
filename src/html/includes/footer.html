@@ -1,0 +1,75 @@
+
+    <div class="footer">
+
+    </div>
+</div>
+
+
+<div class="modal-window blur-modal transparent-form fade-in" data-modal="call_request" >
+    <div class="blur-bg "></div>
+    <div class="modal-content">
+        <div class="section no-padding">
+            <div class="container">
+                <a href="#" class="close" data-close-modal-button="call_request" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-cancel"></i></a>
+                <div class="h2 no-margin-top with-close">Заказать звонок</div>
+                <form action="" id="feedback-modal-form">
+                    <label class="field field-input  margin-top-x2">
+                        <input class="input-text placeholder validate" placeholder="Ваше имя" data-placeholder="Ваше имя" data-validate="required" id="call-feedback_name"
+                               name="feedback_name" type="text">
+                        <p class="error-message"></p>
+                    </label>
+
+                    <label class="field field-input margin-top-x2">
+                        <input class="input-text placeholder validate input-mask" data-mask_tpl="phone_plus7" data-placeholder="Номер телефона" data-validate="number_phone-required" id="call-feedback_phone"
+                               name="feedback_phone" type="text" value="" inputmode="text">
+                        <p class="error-message"></p>
+                    </label>
+
+                    <button class="button margin-top-x3" type="submit" disabled="disabled">Заказать звонок</button>
+                    <div class="form-message">
+                        <div class="text"></div>
+                    </div>
+                </form>
+                <div class="offerta">Нажимая кнопку отправить вы соглашаетесь на обработку персональных данных и с <a
+                        href="#" target="_blank">политикой конфиденциальности</a></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal-window blur-modal transparent-form fade-in gallery-modal" data-modal="gallery-modal" >
+    <div class="blur-bg">
+    </div>
+    <div class="modal-content">
+        <a href="#" class="close" data-close-modal-button="gallery-modal" data-effect-type="open-modal-fade-effect"><i
+                class="icon icon-cancel"></i></a>
+        <i class="gallery-modal__arrow swiper-button-next icon-arrright"></i>
+        <i class="gallery-modal__arrow swiper-button-prev icon-arrleft"></i>
+        <div class="gallery-modal__slider" id="gallery-modal__slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('/img/01.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('/img/02.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('/img/03.jpg')"></div>
+            </div>
+        </div>
+        <div class="gallery-modal__slider-caption">
+            <span class="text" id="gallery-modal__caption">Черновая отделка помещения — Включена в стоимость</span>
+
+            <div class="swiper-pagination gallery-modal-pagination" id="gallery-modal-pagination">
+                <i class="icon-photo"></i><span class="swiper-pagination-current"></span> из <span class="swiper-pagination-total"></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-window-pxl"></div>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=9c2e7f50-a7cc-4ee7-a888-43ca8278fe96&lang=ru_RU"></script>
+<script defer src="js/bundle.js"></script>
+
+
+</body>
+</html>

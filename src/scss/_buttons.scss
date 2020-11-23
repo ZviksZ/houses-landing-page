@@ -1,0 +1,28 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 32px;
+    background: $colorMain;
+    box-shadow: 0 3px 11px rgba(149, 193, 34, 0.5);
+    border-radius: 17px;
+    text-decoration: none;
+    transition: .1s ease;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: $colorWhite;
+    text-transform: initial;
+    @include desktop {
+        &:hover {
+            background: $colorMainActive;
+        }
+    }
+
+    &.button-small {
+        padding: 12px 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

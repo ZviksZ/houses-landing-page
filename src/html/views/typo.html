@@ -1,0 +1,27 @@
+<% var data = { title: "Типографика | Александровская роща" }; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<div class="container">
+    <h1>
+        Headline 1
+    </h1>
+    <h1 class="bold">
+        Headline 1
+    </h1>
+
+    <h2>
+        Headline 2
+    </h2>
+    <h2 class="bold">
+        Headline 2
+    </h2>
+
+    <p>Body 16</p>
+    <p class="body20">Body 20</p>
+    <p class="caption">CAPTION</p>
+
+
+    <a href="" class="button">Button</a>
+</div>
+<%= _.template(require('./../includes/footer.html').default)(data) %>

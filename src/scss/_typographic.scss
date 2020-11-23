@@ -1,0 +1,116 @@
+// Типографика
+
+.section {
+    display: block;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    padding: 52px 0;
+    overflow: hidden;
+    @include mobile {
+        padding: 35px 0;
+    }
+    &.section-bg {
+        background: $colorGrayLight;
+    }
+}
+%title-shared {
+    margin: 24px 0;
+    font-weight: 300;
+    color: $colorText;
+    &.bold {
+        font-weight: 600;
+    }
+}
+h1, .h1 {
+    @extend %title-shared;
+    font-size: 46px;
+    line-height: 59px;
+}
+h2, .h2 {
+    @extend %title-shared;
+    font-size: 36px;
+    line-height: 46px;
+}
+h3, .h3 {
+    @extend %title-shared;
+    font-size: 40px;
+    line-height: 52px;
+}
+h4, .h4 {
+    @extend %title-shared;
+    font-size: 32px;
+    line-height: 41px;
+}
+
+h5, .h5 {
+    @extend %title-shared;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+    color: $colorText;
+    margin: 10px 0;
+    &.body20 {
+        font-size: 20px;
+        line-height: 33px;
+    }
+    &.caption {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+    }
+}
+
+ul {
+    list-style: none;
+    li {
+        position: relative;
+        font-size: 16px;
+        line-height: 24px;
+        color: $colorText;
+        padding-left: 27px;
+        margin: 10px 0;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 0;
+            display: block;
+            width: 7px;
+            height: 7px;
+            background: $colorText;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+a {
+    display: inline-block;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: $colorText;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    transition: .1s ease;
+    @include desktop {
+        &:not(.button):hover {
+            opacity: 0.7;
+        }
+    }
+}
+
