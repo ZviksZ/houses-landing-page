@@ -200,7 +200,7 @@
     color: $colorWhite !important;
 }
 .color-gray {
-    color: $colorGrayLight !important;
+    color: $colorGray !important;
 }
 .color-green {
     color: $colorMain !important;
@@ -222,6 +222,9 @@
 }
 .text-uppercase {
     text-transform: uppercase !important;
+}
+.text-underline {
+    text-decoration: underline !important;
 }
 
 .d-flex {

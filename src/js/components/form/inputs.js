@@ -56,7 +56,7 @@ function initMaskedInput() {
             showMaskOnHover: false,
             showMaskOnFocus: true,
             autoUnmask: autoUnmask
-        }).mask($field);
+        }).mask($field[0]);
 
         $field.addClass('mask-ready');
     });
@@ -91,7 +91,7 @@ function initMoneyInput() {
             autoUnmask: true
             // showMaskOnFocus: false,
             // clearMaskOnLostFocus: true
-        }).mask($field);
+        }).mask($field[0]);
 
         $field.addClass('mask-ready');
     });

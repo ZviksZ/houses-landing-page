@@ -20,7 +20,7 @@
         }
     }
 
-    &.button-small {
+    @include desktop-small {
         padding: 12px 20px;
         font-size: 16px;
         line-height: 22px;
