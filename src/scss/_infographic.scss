@@ -1,3 +1,31 @@
+.section-bg {
+    background: $colorGrayLight;
+}
+.custom-link {
+    color: $colorMain;
+    transition: 0.1s ease;
+    @include desktop {
+        &:hover {
+            color: $colorMainActive !important;
+            opacity: 1 !important;
+        }
+    }
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $colorWhite;
+    z-index: 99999;
+    transition: 0.2s ease;
+    &.preloader-hide {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
 .section-title {
     text-align: left;
     margin-top: 0;

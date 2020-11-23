@@ -33,5 +33,7 @@ $(function() {
    initPlaceholders();
    initMoneyInput();
 
-
+   setTimeout(() => {
+      $('.preloader').addClass('preloader-hide');
+   }, 200);
 });

@@ -3,7 +3,7 @@ import * as $ from 'jquery';
 export class Header {
    constructor() {
       this.$header = $('#header');
-      this.headerClassName = 'header-fixed';
+      this.headerClassName = 'header-bg';
 
       this.init();
    }
@@ -15,10 +15,12 @@ export class Header {
    };
 
    refreshStateHeader = e => {
-      if (pageYOffset > window.innerHeight) {
-         this.$header.addClass(this.headerClassName);
-      } else {
-         this.$header.removeClass(this.headerClassName);
+      if (window.innerWidth >= 1000) {
+         if (pageYOffset > 100) {
+            this.$header.addClass(this.headerClassName);
+         } else {
+            this.$header.removeClass(this.headerClassName);
+         }
       }
    };
 }

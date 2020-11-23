@@ -4,13 +4,18 @@
     left: 0;
     width: 100%;
     height: 110px;
-    background: $colorWhite;
+    background: transparent;
     z-index: 999;
+    transition: 0.2s ease;
+    &.header-bg {
+        background: $colorWhite;
+    }
     @include desktop-small {
         height: 71px;
     }
     @include mobile {
         height: 65px;
+        background: $colorWhite;
     }
     .header__wrap {
         width: 100%;
