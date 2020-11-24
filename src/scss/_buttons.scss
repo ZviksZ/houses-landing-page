@@ -14,6 +14,9 @@
     letter-spacing: 0.01em;
     color: $colorWhite;
     text-transform: initial;
+    border: 0;
+    font-family: $fontBase;
+    cursor: pointer;
     @include desktop {
         &:hover {
             background: $colorMainActive;

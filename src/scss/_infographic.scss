@@ -36,4 +36,22 @@
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
+    &.max-width {
+        max-width: 50%;
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+    &.center {
+        margin: 0 auto;
+    }
+}
+.section-title__double {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text {
+        width: 50%;
+        max-width: 50%;
+    }
 }
