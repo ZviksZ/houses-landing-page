@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: $colorWhite;
     &.fade-in {
         opacity: 0;
         z-index: -12;
@@ -27,6 +28,7 @@
     }
 
     .modal-content {
+        position: relative;
         display: block;
         width: 100%;
         height: 100%;
@@ -95,12 +97,30 @@
     }
 
     .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
         color: $colorGrayLight;
+        border-radius: 14px;
         font-size: 40px;
-        transition: .2s linear;
+        transition: .1s linear;
+        background: rgba(37,53,57,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px;
+        cursor: pointer;
+        z-index: 7;
+        i {
+            font-size: 15px;
+            color: $colorWhite;
+        }
         @include desktop {
             &:hover {
-                opacity: 0.7;
+                opacity: 1;
+                background: rgba(37,53,57,1);
             }
         }
     }

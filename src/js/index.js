@@ -1,12 +1,13 @@
-import * as $ from 'jquery';
-import { CustomSelect } from './components/custom-select';
-import { CustomTabs } from './components/custom-tabs';
-import { Effects } from './components/effects';
-import { FeedForm } from './components/feed-form';
+import * as $                                                from 'jquery';
+import { CustomSelect }                                      from './components/custom-select';
+import { CustomTabs }                                        from './components/custom-tabs';
+import { Effects }                                           from './components/effects';
+import { FeedForm }                                          from './components/feed-form';
 import { initMaskedInput, initMoneyInput, initPlaceholders } from './components/form';
-import { Header } from './components/header';
-import { HeaderMenu } from './components/header-menu';
-import { ModalWindowFullScreen } from './components/modal-window-fullscreen';
+import { Header }                                            from './components/header';
+import { HeaderMenu }                                        from './components/header-menu';
+import { ModalGallery }                                      from './components/modal-gallery';
+import { ModalWindowFullScreen }                             from './components/modal-window-fullscreen';
 window.jQuery = require('jquery');
 
 $(function() {
@@ -21,6 +22,9 @@ $(function() {
 
    // функционал табов
    new CustomTabs();
+
+   // галерея в модалке
+   new ModalGallery();
 
    // форма подписки на рассылку новостей
    new FeedForm();

@@ -1,0 +1,120 @@
+.gallery-modal {
+    .modal-content {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: calc(100% - 190px);
+        margin: 85px auto !important;
+        padding: 0 45px;
+        @include desktop-small {
+            padding: 0 17px;
+            max-width: 80%;
+        }
+        @include mobile {
+            height: auto;
+            padding: 115px 17px 80px !important;
+        }
+        .gallery-modal__arrow {
+            position: absolute;
+            top: calc(50% - 15px);
+            color: $colorText;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 14px;
+            font-size: 40px;
+            transition: .1s linear;
+            background: rgba(37,53,57,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 7;
+            i {
+                font-size: 15px;
+                color: $colorWhite;
+            }
+            @include desktop {
+                &:hover {
+                    opacity: 1;
+                    background: rgba(37,53,57,1);
+                }
+            }
+            &.swiper-button-next {
+                right: 0;
+                padding-left: 2px;
+            }
+            &.swiper-button-prev {
+                left: 0;
+                padding-right: 2px;
+                img {
+                    display: block;
+                    transform: rotate(180deg);
+                }
+            }
+            &.swiper-button-disabled {
+                opacity: 0.4;
+            }
+        }
+        .gallery-modal__slider {
+            width: 100%;
+            height: 100%;
+            border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            @include mobile {
+                height: auto;
+                align-items: flex-start;
+            }
+            .swiper-wrapper {
+                height: 100%;
+            }
+            .swiper-slide {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                -webkit-background-size: contain;
+                background-size: contain;
+                @include mobile {
+                    height: auto;
+                    &:before {
+                        display: block;
+                        float: left;
+                        content: '';
+                        padding-top: 70%;
+                    }
+                }
+            }
+        }
+        .gallery-modal__slider-caption {
+            width: 100%;
+            position: absolute;
+            bottom: -35px;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .text {
+                display: inline-block;
+                margin-right: 15px;
+                font-weight: 800;
+                font-size: 16px;
+                line-height: 23px;
+                color: $colorMain;
+            }
+            @include mobile {
+                padding: 0 17px;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                bottom: 0;
+                .text {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
