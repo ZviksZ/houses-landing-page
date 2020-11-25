@@ -6,8 +6,10 @@ import { FeedForm }                                          from './components/
 import { initMaskedInput, initMoneyInput, initPlaceholders } from './components/form';
 import { Header }                                            from './components/header';
 import { HeaderMenu }                                        from './components/header-menu';
+import { HousesModal }                                       from './components/houses-modal';
 import { ModalGallery }                                      from './components/modal-gallery';
 import { ModalWindowFullScreen }                             from './components/modal-window-fullscreen';
+import { NewsModal }                                         from './components/news-modal';
 window.jQuery = require('jquery');
 
 $(function() {
@@ -26,7 +28,13 @@ $(function() {
    // галерея в модалке
    new ModalGallery();
 
-   // форма подписки на рассылку новостей
+   //Модалка с описанием домов
+   new HousesModal();
+
+   //Модалка новостей
+   new NewsModal();
+
+   // форма обратной связи
    new FeedForm();
 
    // инициализация функционала модальных окон

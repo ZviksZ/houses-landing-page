@@ -46,16 +46,16 @@
 </div>
 
 
-<div class="modal-window blur-modal transparent-form fade-in" data-modal="call_request" >
+<div class="modal-window fade-in form-modal" id="form-modal" data-modal="form-modal" >
     <div class="modal-content">
         <div class="section no-padding">
             <div class="container">
-                <a href="#" class="close" data-close-modal-button="call_request" data-effect-type="open-modal-fade-effect"><i
-                        class="icon icon-cancel"></i></a>
-                <div class="h2 no-margin-top with-close">Заказать звонок</div>
-                <form action="" id="feedback-modal-form">
-                    <label class="field field-input  margin-top-x2">
-                        <input class="input-text placeholder validate" placeholder="Ваше имя" data-placeholder="Ваше имя" data-validate="required" id="call-feedback_name"
+                <a href="#" class="close" data-close-modal-button="form-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
+                <form action="" id="feedback-form">
+                    <div class="h2 no-margin-top no-margin-bottom with-close" id="form-modal__title">Заказать звонок</div>
+                    <label class="field field-input ">
+                        <input class="input-text placeholder validate" placeholder="Ваше имя" data-placeholder="Как вас зовут?" data-validate="required" id="call-feedback_name"
                                name="feedback_name" type="text">
                         <p class="error-message"></p>
                     </label>
@@ -66,20 +66,32 @@
                         <p class="error-message"></p>
                     </label>
 
-                    <button class="button margin-top-x3" type="submit" disabled="disabled">Заказать звонок</button>
-                    <div class="form-message">
-                        <div class="text"></div>
+                    <input type="text" hidden name="cc" value="78">
+                    <input type="text" hidden name="sub" value="78">
+                    <input type="text" hidden name="cc" value="78">
+
+                    <div class="form-modal__footer">
+                        <button class="button" type="submit">Оставить заявку</button>
+                        <p class="text color-gray">
+                            Нажимая кнопку вы даёте согласие на обработку персональных данных
+                        </p>
+                    </div>
+
+
+
+                    <div class="form-message" id="form-modal__message">
+                        <h4 class="h4 text-align-center title"></h4>
+                        <p class="color-gray body20 text"></p>
+                        <a href="" class="button" data-close-modal-button="form-modal" data-effect-type="open-modal-fade-effect">Закрыть</a>
                     </div>
                 </form>
-                <div class="offerta">Нажимая кнопку отправить вы соглашаетесь на обработку персональных данных и с <a
-                        href="#" target="_blank">политикой конфиденциальности</a></div>
             </div>
         </div>
 
     </div>
 </div>
 
-<div class="modal-window blur-modal transparent-form fade-in gallery-modal" data-modal="gallery-modal" >
+<div class="modal-window fade-in gallery-modal" data-modal="gallery-modal" >
     <div class="container">
         <div class="modal-content">
             <a href="#" class="close" data-close-modal-button="gallery-modal" data-effect-type="open-modal-fade-effect"><i
@@ -96,7 +108,340 @@
         </div>
     </div>
 </div>
+<div class="modal-window fade-in news-modal" id="news-modal" data-modal="news-modal">
+        <div class="container">
+            <div class="modal-content hide" data-news="1">
+                <a href="#" class="close" data-close-modal-button="news-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
+                <div class="news-container">
+                    <p class="color-gray">1 октября, 21:00</p>
+                    <h2 class="h1">Проекты по сохранению объектов культурного наследия и развитию Санкт-Петербурга получили высокую оценку Правительства РФ </h2>
+                    <p class="color-gray">
+                        Просторный 1-этажный дом — отличное решение для тех, кто ищет дружелюбное домашнее пространство. Расположение всех комнат в одной плоскости особенно оценят родители маленьких
+                        детей или пожилые люди, потому что перемещаться по такому дому не только комфортно, но и безопасно. А размер коттеджа позволит разместиться всем членам семьи с максимальным
+                        удобством. Роскошная кухня-гостиная площадью почти 47 кв. м с выходом на террасу — это настоящее сердце дома. Три раздельные спальни удобной прямоугольной формы легко
+                        зонировать и меблировать. Два санузла и гардеробная комната добавят бытового комфорта. Коттедж доступен в черновой отделке.
+                    </p>
+                    <p class="color-gray">
+                        1-этажный дом расположен на участке площадью 10 соток. Все коммуникации (электричество, газ, центральное водоснабжение, автономная канализация) доведены до участка. К дому
+                        ведет асфальтированная дорога, что обеспечит доступ в любое время года.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-content hide" data-news="2">
+                <a href="#" class="close" data-close-modal-button="news-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
+                <div class="news-container">
+                    <p class="color-gray">2 октября, 21:00</p>
+                    <h2 class="h1">Проекты по сохранению объектов культурного наследия и развитию Санкт-Петербурга получили высокую оценку Правительства РФ </h2>
+                    <p class="color-gray">
+                        Просторный 1-этажный дом — отличное решение для тех, кто ищет дружелюбное домашнее пространство. Расположение всех комнат в одной плоскости особенно оценят родители маленьких
+                        детей или пожилые люди, потому что перемещаться по такому дому не только комфортно, но и безопасно. А размер коттеджа позволит разместиться всем членам семьи с максимальным
+                        удобством. Роскошная кухня-гостиная площадью почти 47 кв. м с выходом на террасу — это настоящее сердце дома. Три раздельные спальни удобной прямоугольной формы легко
+                        зонировать и меблировать. Два санузла и гардеробная комната добавят бытового комфорта. Коттедж доступен в черновой отделке.
+                    </p>
+                    <p class="color-gray">
+                        1-этажный дом расположен на участке площадью 10 соток. Все коммуникации (электричество, газ, центральное водоснабжение, автономная канализация) доведены до участка. К дому
+                        ведет асфальтированная дорога, что обеспечит доступ в любое время года.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-content hide" data-news="3">
+                <a href="#" class="close" data-close-modal-button="news-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
+                <div class="news-container">
+                    <p class="color-gray">3 октября, 21:00</p>
+                    <h2 class="h1">Проекты по сохранению объектов культурного наследия и развитию Санкт-Петербурга получили высокую оценку Правительства РФ </h2>
+                    <p class="color-gray">
+                        Просторный 1-этажный дом — отличное решение для тех, кто ищет дружелюбное домашнее пространство. Расположение всех комнат в одной плоскости особенно оценят родители маленьких
+                        детей или пожилые люди, потому что перемещаться по такому дому не только комфортно, но и безопасно. А размер коттеджа позволит разместиться всем членам семьи с максимальным
+                        удобством. Роскошная кухня-гостиная площадью почти 47 кв. м с выходом на террасу — это настоящее сердце дома. Три раздельные спальни удобной прямоугольной формы легко
+                        зонировать и меблировать. Два санузла и гардеробная комната добавят бытового комфорта. Коттедж доступен в черновой отделке.
+                    </p>
+                    <p class="color-gray">
+                        1-этажный дом расположен на участке площадью 10 соток. Все коммуникации (электричество, газ, центральное водоснабжение, автономная канализация) доведены до участка. К дому
+                        ведет асфальтированная дорога, что обеспечит доступ в любое время года.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal-window fade-in house-modal" id="house-modal" data-modal="house-modal">
+        <div class="container">
+            <div class="modal-content hide" data-house="1">
+                <a href="#" class="close" data-close-modal-button="house-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
 
+                <div class="house-modal__wrap">
+                    <div class="house-modal__slider-wrap">
+                        <div class="house-modal__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image: url(./img/houses/1.jpg)"></div>
+                                <div class="swiper-slide" style="background-image: url(./img/houses/2.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="house-modal__info">
+                        <h2 class="h1 title no-margin-top">
+                            Одноэтажный дом 140 м²
+                        </h2>
+                        <p class="body20 color-gray">
+                            c земельным участком 100 м²
+                        </p>
+                        <div class="house-modal__icons">
+                            <div class="item">
+                                <i class="icon-stairs"></i>
+                                <p class="body20">
+                                    1 этаж
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-double-bed"></i>
+                                <p class="body20">
+                                    3 спальни
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-bath"></i>
+                                <p class="body20">
+                                    2 санузла
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="house-modal__list">
+                            <li>Электричество</li>
+                            <li>Газ</li>
+                            <li>Центральное водоснабжение</li>
+                            <li>Автономная канализация</li>
+                            <li>Материал стен — кайман, облицовочный кирпич цвета слоновой кости</li>
+                            <li>Фундамент — ленточный</li>
+                            <li>Крыша — металлочерепица</li>
+                        </ul>
+
+                        <div class="house-modal__price">
+                            <span class="price">6 300 000 ₽</span>
+                            <a href="#" class="button">Оставить заявку</a>
+                        </div>
+                        <div class="house-modal__desc">
+                            <h4 class="h4">Описание</h4>
+                            <p>
+                                Просторный 1-этажный дом — отличное решение для тех, кто ищет дружелюбное домашнее пространство. Расположение всех комнат в одной плоскости особенно оценят родители маленьких детей или пожилые люди, потому что перемещаться по такому дому не только комфортно, но и безопасно. А размер коттеджа позволит разместиться всем членам семьи с максимальным удобством. Роскошная кухня-гостиная площадью почти 47 кв. м с выходом на террасу — это настоящее сердце дома. Три раздельные спальни удобной прямоугольной формы легко зонировать и меблировать. Два санузла и гардеробная комната добавят бытового комфорта. Коттедж доступен в черновой отделке.
+                            </p>
+                            <p>
+                                1-этажный дом расположен на участке площадью 10 соток. Все коммуникации (электричество, газ, центральное водоснабжение, автономная канализация) доведены до участка. К дому ведет асфальтированная дорога, что обеспечит доступ в любое время года.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div data-hous data->
+            <div class="modal-content hide" data-house="2">
+                <a href="#" class="close" data-close-modal-button="house-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
+
+                <div class="house-modal__wrap">
+                    <div class="house-modal__slider-wrap">
+                        <div class="house-modal__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image: url(./img/houses/2.jpg)"></div>
+                                <div class="swiper-slide" style="background-image: url(./img/houses/1.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="house-modal__info">
+                        <h2 class="h1 title no-margin-top">
+                            Одноэтажный дом 140 м² 2
+                        </h2>
+                        <p class="body20 color-gray">
+                            c земельным участком 100 м²
+                        </p>
+                        <div class="house-modal__icons">
+                            <div class="item">
+                                <i class="icon-stairs"></i>
+                                <p class="body20">
+                                    1 этаж
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-double-bed"></i>
+                                <p class="body20">
+                                    3 спальни
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-bath"></i>
+                                <p class="body20">
+                                    2 санузла
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="house-modal__list">
+                            <li>Электричество</li>
+                            <li>Газ</li>
+                            <li>Центральное водоснабжение</li>
+                            <li>Автономная канализация</li>
+                            <li>Материал стен — кайман, облицовочный кирпич цвета слоновой кости</li>
+                            <li>Фундамент — ленточный</li>
+                            <li>Крыша — металлочерепица</li>
+                        </ul>
+
+                        <div class="house-modal__price">
+                            <span class="price">6 300 000 ₽</span>
+                            <a href="#" class="button">Оставить заявку</a>
+                        </div>
+                        <div class="house-modal__desc">
+                            <h4 class="h4">Описание</h4>
+                            <p>
+                                Просторный 1-этажный дом — отличное решение для тех, кто ищет дружелюбное домашнее пространство. Расположение всех комнат в одной плоскости особенно оценят родители маленьких детей или пожилые люди, потому что перемещаться по такому дому не только комфортно, но и безопасно. А размер коттеджа позволит разместиться всем членам семьи с максимальным удобством. Роскошная кухня-гостиная площадью почти 47 кв. м с выходом на террасу — это настоящее сердце дома. Три раздельные спальни удобной прямоугольной формы легко зонировать и меблировать. Два санузла и гардеробная комната добавят бытового комфорта. Коттедж доступен в черновой отделке.
+                            </p>
+                            <p>
+                                1-этажный дом расположен на участке площадью 10 соток. Все коммуникации (электричество, газ, центральное водоснабжение, автономная канализация) доведены до участка. К дому ведет асфальтированная дорога, что обеспечит доступ в любое время года.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div data-hous data->
+            <div class="modal-content hide" data-house="3">
+                <a href="#" class="close" data-close-modal-button="house-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
+
+                <div class="house-modal__wrap">
+                    <div class="house-modal__slider-wrap">
+                        <div class="house-modal__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image: url(./img/houses/3.jpg)"></div>
+                                <div class="swiper-slide" style="background-image: url(./img/houses/4.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="house-modal__info">
+                        <h2 class="h1 title no-margin-top">
+                            Одноэтажный дом 140 м² 3
+                        </h2>
+                        <p class="body20 color-gray">
+                            c земельным участком 100 м²
+                        </p>
+                        <div class="house-modal__icons">
+                            <div class="item">
+                                <i class="icon-stairs"></i>
+                                <p class="body20">
+                                    1 этаж
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-double-bed"></i>
+                                <p class="body20">
+                                    3 спальни
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-bath"></i>
+                                <p class="body20">
+                                    2 санузла
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="house-modal__list">
+                            <li>Электричество</li>
+                            <li>Газ</li>
+                            <li>Центральное водоснабжение</li>
+                            <li>Автономная канализация</li>
+                            <li>Материал стен — кайман, облицовочный кирпич цвета слоновой кости</li>
+                            <li>Фундамент — ленточный</li>
+                            <li>Крыша — металлочерепица</li>
+                        </ul>
+
+                        <div class="house-modal__price">
+                            <span class="price">6 300 000 ₽</span>
+                            <a href="#" class="button">Оставить заявку</a>
+                        </div>
+                        <div class="house-modal__desc">
+                            <h4 class="h4">Описание</h4>
+                            <p>
+                                Просторный 1-этажный дом — отличное решение для тех, кто ищет дружелюбное домашнее пространство. Расположение всех комнат в одной плоскости особенно оценят родители маленьких детей или пожилые люди, потому что перемещаться по такому дому не только комфортно, но и безопасно. А размер коттеджа позволит разместиться всем членам семьи с максимальным удобством. Роскошная кухня-гостиная площадью почти 47 кв. м с выходом на террасу — это настоящее сердце дома. Три раздельные спальни удобной прямоугольной формы легко зонировать и меблировать. Два санузла и гардеробная комната добавят бытового комфорта. Коттедж доступен в черновой отделке.
+                            </p>
+                            <p>
+                                1-этажный дом расположен на участке площадью 10 соток. Все коммуникации (электричество, газ, центральное водоснабжение, автономная канализация) доведены до участка. К дому ведет асфальтированная дорога, что обеспечит доступ в любое время года.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div data-hous data->
+            <div class="modal-content hide" data-house="4">
+                <a href="#" class="close" data-close-modal-button="house-modal" data-effect-type="open-modal-fade-effect"><i
+                        class="icon icon-close"></i></a>
+
+                <div class="house-modal__wrap">
+                    <div class="house-modal__slider-wrap">
+                        <div class="house-modal__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image: url(./img/houses/4.jpg)"></div>
+                                <div class="swiper-slide" style="background-image: url(./img/houses/3.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="house-modal__info">
+                        <h2 class="h1 title no-margin-top">
+                            Одноэтажный дом 140 м² 4
+                        </h2>
+                        <p class="body20 color-gray">
+                            c земельным участком 100 м²
+                        </p>
+                        <div class="house-modal__icons">
+                            <div class="item">
+                                <i class="icon-stairs"></i>
+                                <p class="body20">
+                                    1 этаж
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-double-bed"></i>
+                                <p class="body20">
+                                    3 спальни
+                                </p>
+                            </div>
+                            <div class="item">
+                                <i class="icon-bath"></i>
+                                <p class="body20">
+                                    2 санузла
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="house-modal__list">
+                            <li>Электричество</li>
+                            <li>Газ</li>
+                            <li>Центральное водоснабжение</li>
+                            <li>Автономная канализация</li>
+                            <li>Материал стен — кайман, облицовочный кирпич цвета слоновой кости</li>
+                            <li>Фундамент — ленточный</li>
+                            <li>Крыша — металлочерепица</li>
+                        </ul>
+
+                        <div class="house-modal__price">
+                            <span class="price">6 300 000 ₽</span>
+                            <a href="#" class="button">Оставить заявку</a>
+                        </div>
+                        <div class="house-modal__desc">
+                            <h4 class="h4">Описание</h4>
+                            <p>
+                                Просторный 1-этажный дом — отличное решение для тех, кто ищет дружелюбное домашнее пространство. Расположение всех комнат в одной плоскости особенно оценят родители маленьких детей или пожилые люди, потому что перемещаться по такому дому не только комфортно, но и безопасно. А размер коттеджа позволит разместиться всем членам семьи с максимальным удобством. Роскошная кухня-гостиная площадью почти 47 кв. м с выходом на террасу — это настоящее сердце дома. Три раздельные спальни удобной прямоугольной формы легко зонировать и меблировать. Два санузла и гардеробная комната добавят бытового комфорта. Коттедж доступен в черновой отделке.
+                            </p>
+                            <p>
+                                1-этажный дом расположен на участке площадью 10 соток. Все коммуникации (электричество, газ, центральное водоснабжение, автономная канализация) доведены до участка. К дому ведет асфальтированная дорога, что обеспечит доступ в любое время года.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div data-hous data->
+        </div>
+    </div>
 <div class="modal-window-pxl"></div>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=9c2e7f50-a7cc-4ee7-a888-43ca8278fe96&lang=ru_RU"></script>

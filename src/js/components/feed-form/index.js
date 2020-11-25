@@ -1,15 +1,15 @@
-import * as $                    from 'jquery';
-import {initFormWithValidate} from "../form";
+import * as $                                 from 'jquery';
+import { initFormWithValidate, validateForm } from "../form";
 
 export class FeedForm {
    constructor() {
-      this.$form = $('#feed_form');
+      this.$form = $('#feedback-form');
 
-      if (!this.$form) {
-         return false
-      }
-      //this.$formMessage = this.$form.find('.form-message');
+      if (!this.$form.length) return false;
 
+      this.$formTitle = $('#form-modal__title')
+      this.$formMessage = $('#form-modal__message')
+      this.$formOpenBtns = $('[data-open-form]')
       this.init();
    }
 
@@ -21,68 +21,68 @@ export class FeedForm {
 
    initHandlers = () => {
       this.$form.on('submit', this.onSubmit)
+
+      this.$formOpenBtns.on('click', this.openForm)
+   }
+
+   openForm = (e) => {
+      let title = $(e.currentTarget).attr('data-title');
+
+      if (title) {
+         this.$formTitle.text(title)
+      }
    }
 
    onSubmit = async (e) => {
       e.preventDefault();
 
-      let data = {
-         f_email: this.$form.find('#feed-follow-input').val()
-      }
+      let data = this.$form.serialize();
 
-      /* let $formData = {};
-
-       this.$form.find('input, textarea, select').each(function() {
-          $formData[this.name] = $(this).val();
-       });
-
-
-
-       /!*let data = {
-          isNaked: 1,
-          f_name:$formData.career_name,
-          f_phone: $formData.career_phone,
-          f_rezume:  new FormData(file),
-          catalogue: 1,
-          cc: 44,
-          sub: 38,
-          posting: 1
-       }*!/
-       let form = $(e.currentTarget)*/
-
-      try {
-         await fetch('/netcat/add.php', {
-            method: 'POST',
-            body: data
+      if (validateForm(this.$form, true)) {
+         $.ajax({
+            url: '/netcat/add.php',
+            type: 'POST',
+            dataType: 'text',
+            data: data,
+            success: res => {
+               this.successForm();
+            },
+            error: res => {
+               this.errorForm();
+            },
+            timeout: 30000
          });
-
-         this.successForm()
-      } catch (e) {
-         this.errorForm()
       }
-
-
-
-      this.successForm()
    }
 
    successForm = () => {
-      this.clearForm();
+      this.clearForm(this.$form);
 
+      this.$formMessage.find('.title').text('Успешно!');
+      this.$formMessage.find('.text').text('Мы получили вашу заявку и скоро свяжемся с вами для уточнения всех деталей');
 
-      //this.$form.addClass('form-hide');
-
-
-   }
+      this.$formMessage.addClass('show-message');
+   };
 
    errorForm = () => {
+      this.$formMessage.find('.title').text('Ошибка');
+      this.$formMessage.find('.text').text('Отправка данных не удалась. Попробуйте повторить отправку формы.');
 
-   }
+      this.$formMessage.addClass('show-message');
 
-   clearForm = () => {
-      this.$form[0].reset();
-      this.$form.find('.field').removeClass('success').addClass('empty');
-   }
+      setTimeout(() => {
+         this.$formMessage.removeClass('show-message');
+      }, 2500);
+   };
+
+   clearForm = form => {
+      form[0].reset();
+      form
+         .find('.field')
+         .removeClass('success')
+         .addClass('empty');
+      form.find('.field input').val('');
+   };
 
 
 }

@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import Swiper from "swiper/js/swiper.min.js";
+import Swiper from 'swiper/js/swiper.min.js';
 
 export class ModalGallery {
    constructor() {
@@ -16,19 +16,19 @@ export class ModalGallery {
       this.initModalItems();
       this.initModalSlider();
       this.initSlideTo();
-   }
+   };
 
    initSlideTo = () => {
-      this.$gallery.find('.item').on('click', (e) => {
+      this.$gallery.find('.item').on('click', e => {
          let slide = +$(e.currentTarget).attr('data-slide');
 
          this.$sliderInstance.slideTo(slide, 10, true);
 
          setTimeout(() => {
             this.$sliderInstance.update();
-         }, 10)
-      })
-   }
+         }, 10);
+      });
+   };
 
    initModalItems = () => {
       let template = ``;
@@ -36,19 +36,19 @@ export class ModalGallery {
       this.$gallery.find('.item').each((index, item) => {
          let img = item.dataset.img;
 
-         template += this.getModalItemTemplate(img)
-      })
+         template += this.getModalItemTemplate(img);
+      });
 
-      this.$slider.find('.swiper-wrapper').html(template)
-   }
+      this.$slider.find('.swiper-wrapper').html(template);
+   };
 
-   getModalItemTemplate = (image) => {
+   getModalItemTemplate = image => {
       return `
          <div class="swiper-slide" style="background-image: url(${image})">
             
          </div>
-      `
-   }
+      `;
+   };
 
    initModalSlider = () => {
       this.$sliderInstance = new Swiper(this.$slider, {
@@ -64,12 +64,7 @@ export class ModalGallery {
          navigation: {
             nextEl: '.gallery-modal .swiper-button-next',
             prevEl: '.gallery-modal .swiper-button-prev'
-         },
+         }
       });
-
-   }
-
-
+   };
 }
-
-

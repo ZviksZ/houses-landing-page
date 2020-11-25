@@ -55,84 +55,41 @@ input, textarea, select { font-family:'Source Sans Pro' !important; }
         transform: translateY(0);
         opacity: 1;
     }
-    .form-message {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #ffffff;
-        opacity: 0;
-        transition-delay: 1s;
-        z-index: -1;
-        * {
-            transform: translateY(100%);
-            opacity: 0;
-            transition: .6s linear;
-        }
-        .message-icon {
-            display: flex;
-            width: 45px;
-            height: 45px;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            img {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-            }
-        }
-        .message-title {
-            font-weight: bold;
-            font-size: 25px;
-            line-height: 26px;
-            text-align: center;
-            color: $colorText;
-            transition-delay: 0.8s;
-            margin-top: 10px;
-            margin-bottom: 3px;
-        }
-        .message-subtitle {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 26px;
-            text-align: center;
-            color: $colorText;
-            transition-delay: 0.9s;
-            margin-top: 0;
-        }
-    }
     .form-text {
         width: 100%;
         margin: 0;
     }
-    &.form-hide {
-        .field,
-        .form-bottom,
-        .h5,
-        .modal-caption-with-close,
-        .button,
-        .career_file,
-        .form-text,
-        .form-footer {
-            transform: translateY(-100%);
-            opacity: 0;
-            pointer-events: none;
-        }
-        .form-message {
-            height: 100%;
-            transform: translateY(0);
-            opacity: 1;
-            z-index: 9;
-            * {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+
+}
+
+.form-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 0;
+    transform: translateY(100%);
+    transition-delay: 1s;
+    z-index: 1000;
+    &.show-message {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .title {
+        margin: 0;
+    }
+    .text {
+        text-align: center;
+        margin: 14px 27px;
+    }
+    .button {
+        margin: 0;
     }
 }
 
@@ -144,6 +101,8 @@ input, textarea, select { font-family:'Source Sans Pro' !important; }
     cursor: pointer;
     z-index: 999;
     .label {
+        position: absolute;
+        top: -9px;
         display: inline-block;
         width: 100%;
         z-index: 20;
@@ -157,36 +116,44 @@ input, textarea, select { font-family:'Source Sans Pro' !important; }
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease;
         font-family: $fontBase !important;
-        font-size: 16px;
-        line-height: 19px;
-        color: #6C6B76;
+        font-size: 12px;
+        line-height: 17px;
+        color: $colorGray;
         margin-bottom: 6px;
     }
     .input-text, .input-fill-control {
         display: flex;
         width: 100%;
-        height: 48px;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 32px;
+        height: 43px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 33px;
         color: $colorText;
-        padding: 14px 19px;
+        padding: 5px 0;
         box-sizing: border-box;
         font-family: $fontBase !important;
-        border: 2px solid #DDDDDD;
-        border-radius: 6px;
+        border: 0;
+        border-bottom: 1px solid rgba(117,127,130,0.5);
         &:-webkit-autofill {
             -webkit-animation-name: autofill;
             -webkit-animation-fill-mode: both;
         }
         &:focus {
-            border: 2px solid $colorText;
+            border-bottom: 1px solid $colorMain;
         }
 
     }
     &.empty {
+        .label {
+            top: 5px;
+            left: 0;
+            font-size: 20px;
+            line-height: 33px;
+            color: $colorGray;
+        }
         .input-text {
-            border: 2px solid #DDDDDD;
+            border: 0;
+            border-bottom: 1px solid rgba(117,127,130,0.5);
             &::-webkit-input-placeholder {
                 opacity: 0;
             }
@@ -202,7 +169,7 @@ input, textarea, select { font-family:'Source Sans Pro' !important; }
         }
         &.error {
             .input-text, .input-fill-control {
-                border: 2px solid red;
+                border-bottom: 1px solid #FF0000;
             }
         }
     }
@@ -219,7 +186,7 @@ input, textarea, select { font-family:'Source Sans Pro' !important; }
     @include desktop {
         &:hover {
             .input-text, .input-fill-control {
-                border: 2px solid $colorText;
+                border-bottom: 1px solid $colorMain;
             }
 
         }
@@ -230,13 +197,13 @@ input, textarea, select { font-family:'Source Sans Pro' !important; }
     }
     .error-message {
         display: none;
-        margin: 5px 0 0 0;
-        font-size: 14px;
-        line-height: 18px;
+        margin: 2px 0 0 0;
+        font-size: 12px;
+        line-height: 17px;
         font-weight: 400;
-        color: red;
+        color: #FF0000;
         position: absolute;
-        top: 66px;
+        top: 41px;
         left: 0;
     }
     &.error {
@@ -249,7 +216,7 @@ input, textarea, select { font-family:'Source Sans Pro' !important; }
         }
         @include desktop {
             .input-text:hover, .input-fill-control:hover {
-                border: 2px solid red;
+                border-bottom: 2px solid #FF0000;
             }
         }
     }

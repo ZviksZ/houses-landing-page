@@ -1,0 +1,35 @@
+.form-modal {
+    background: rgba(37,53,57,0.9);
+    .modal-content {
+        position: relative;
+        max-width: 698px;
+        border-radius: 17px;
+        background: $colorWhite;
+        padding: 42px;
+        height: auto !important;
+        .close {
+            top: 2px;
+            z-index: 1001;
+        }
+        #form-modal__title {
+            margin-bottom: 26px !important;
+        }
+        .form-modal__footer {
+            display: flex;
+            margin-top: 30px;
+            @include only-mobile {
+                flex-wrap: wrap;
+                .button {
+                    margin-bottom: 10px;
+                }
+            }
+            .button {
+                white-space: nowrap;
+                margin: 0;
+            }
+            .text {
+                margin-left: 36px;
+            }
+        }
+    }
+}

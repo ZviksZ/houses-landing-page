@@ -1,0 +1,148 @@
+.house-modal {
+    .modal-content {
+        padding: 0;
+
+        .close {
+            top: 10px;
+        }
+        .house-modal__wrap {
+            display: flex;
+            .house-modal__slider-wrap {
+                width: 100%;
+                max-width: calc(100% - 636px);
+                padding-right: 43px;
+                .house-modal__slider {
+                    overflow: hidden;
+                }
+                .swiper-pagination {
+                    display: flex;
+                    justify-content: center;
+                    padding: 11px 0;
+                    .swiper-pagination-bullet {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: $colorGrayMiddle;
+                        transition: 0.1s ease;
+                        cursor: pointer;
+                        z-index: 6;
+                        &.swiper-pagination-bullet-active {
+                            background: $colorMain;
+                        }
+                        @include desktop {
+                            &:hover {
+                                background: $colorMain;
+                            }
+                        }
+                    }
+                    .swiper-pagination-bullet + .swiper-pagination-bullet {
+                        margin-left: 22px;
+                    }
+                }
+                .swiper-slide {
+                    display: flex;
+                    width: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    -webkit-background-size: cover;
+                    background-size: cover;
+                    &:before {
+                        display: block;
+                        content: '';
+                        float: left;
+                        padding-top: 67%;
+                    }
+                }
+            }
+            .house-modal__info {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 636px;
+                min-width: 636px;
+                padding-left: 37px;
+                &:before {
+                    position: absolute;
+                    top: -85px;
+                    left: 0;
+                    bottom: 0;
+                    display: block;
+                    width: 1px;
+                    height: calc(100% + 170px);
+                    content: '';
+                    background: #C8D0D2;
+                    opacity: 0.5;
+                }
+                .title {
+                    padding-right: 120px;
+                    margin-bottom: 11px;
+                }
+                .title + p {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+                .house-modal__icons {
+                    display: flex;
+                    align-items: flex-start;
+                    margin: 25px 0 17px;
+                    .item {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        i {
+                            font-size: 26px;
+                            color: $colorMain;
+                        }
+                        p {
+                            margin: 8px 0 0;
+                        }
+                    }
+                    .item + .item {
+                        margin-left: 84px;
+                    }
+                }
+                .house-modal__list {
+                    columns: 2;
+                    li {
+                        position: relative;
+                        padding-left: 31px;
+                        list-style: none;
+                        font-size: 16px;
+                        line-height: 25px;
+                        letter-spacing: 0.02em;
+                        color: $colorText;
+                        margin: 0;
+                        padding-bottom: 15px;
+                        &:before {
+                            position: absolute;
+                            top: 7px;
+                            left: 0;
+                            display: block;
+                            width: 10px;
+                            height: 8px;
+                            content: '';
+                            background: url("../img/common/list-arrow.svg") no-repeat center center;
+                            -webkit-background-size: contain;
+                            background-size: contain;
+                        }
+                    }
+                }
+                .house-modal__price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: 25px 0;
+                    .price {
+                        font-weight: 600;
+                        font-size: 36px;
+                        line-height: 46px;
+                        letter-spacing: 0.01em;
+                        color: $colorText;
+                    }
+                }
+            }
+        }
+    }
+}
