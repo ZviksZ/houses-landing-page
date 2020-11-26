@@ -1,5 +1,8 @@
 .form-modal {
     background: rgba(37,53,57,0.9);
+    &.fade-in-show {
+        z-index: 10000 !important;
+    }
     .modal-content {
         position: relative;
         max-width: 698px;

@@ -6,10 +6,6 @@
         height: calc(100% - 190px);
         margin: 85px auto !important;
         padding: 0 45px;
-        @include desktop-small {
-            padding: 0 17px;
-            max-width: 80%;
-        }
         @include mobile {
             height: auto;
             padding: 115px 17px 80px !important;

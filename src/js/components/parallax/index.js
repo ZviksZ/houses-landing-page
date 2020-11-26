@@ -63,7 +63,7 @@ export class Parallax {
          if (screenTop > top && screenTop < top + this.windowHeight - 200) {
             let p = screenTop - top;
             let x = 0;
-            let y = -p * 0.8;
+            let y = -p * 0.6;
             let scale = 1;
             let angle = -p * 0.1;
 
@@ -86,7 +86,7 @@ export class Parallax {
          if (screenTop > top && screenTop < top + this.windowHeight - 200) {
             let p = screenTop - top;
             let x = 0;
-            let y = -p * 0.8;
+            let y = -p * 0.6;
             let scale = 1;
             let angle = -p * 0.1;
 
@@ -109,7 +109,7 @@ export class Parallax {
          if (screenTop > top && screenTop < top + this.windowHeight - 200) {
             let p = screenTop - top;
             let x = 0;
-            let y = -p * 0.8;
+            let y = -p * 0.6;
             let scale = 1;
             let angle = -p * 0.1;
 

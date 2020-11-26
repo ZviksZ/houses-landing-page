@@ -1,6 +1,6 @@
 .section-main {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background: #DEE6EE;
     overflow: hidden;
     .section-main__bg {
@@ -14,6 +14,14 @@
         -webkit-background-size: 64%;
         background-size: 64%;
         z-index: 4;
+        @include desktop-medium {
+            -webkit-background-size: 54%;
+            background-size: 54%;
+        }
+        @include desktop-small {
+            -webkit-background-size: 48%;
+            background-size: 48%;
+        }
     }
     .section-main__сloud {
         position: absolute;
@@ -47,6 +55,20 @@
         .text {
             margin: 27px 0 58px;
         }
+        @include desktop-medium {
+            padding: 62px 0 50px;
+            max-width: 50%;
+        }
+        @include desktop-small {
+            padding: 52px 0 50px;
+            max-width: 50%;
+            .text {
+                margin: 17px 0 28px;
+            }
+            .button {
+                margin-top: 0;
+            }
+        }
     }
     &.visible {
         .content {
@@ -54,7 +76,7 @@
             transform: translateX(0)  translateZ(0);
         }
         .section-main__сloud {
-            //animation: cloud 100s;
+            animation: cloud 230s;
         }
     }
 }
