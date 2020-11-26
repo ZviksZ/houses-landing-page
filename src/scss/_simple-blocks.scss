@@ -244,4 +244,28 @@
         margin: 0 auto;
     }
 }
-
+.section-with-leaf {
+    overflow: visible !important;
+}
+.parallax_leaf {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    &.parallax_leaf-1 {
+        max-width: 307px;
+        top: -70px;
+        left: -15px;
+    }
+    &.parallax_leaf-2 {
+        max-width: 240px;
+        right: -20px;
+        bottom: -40px;
+    }
+    &.parallax_leaf-3 {
+        max-width: 135px;
+        left: -10px;
+        bottom: -15px;
+    }
+}

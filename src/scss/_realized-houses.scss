@@ -1,210 +1,301 @@
 /**
 Блок Выбор секции
  */
-.rh-sections {
-    display: block;
-    position: relative;
-    z-index: 5;
-    margin: 0;
-    background: $colorGrayLight;
-
-    .apartments-content {
-        display: block;
-        position: absolute;
-        z-index: 5;
-        left: 0;
-        right: 0;
-        top: 35px;
-        pointer-events: none;
+.section-relized-houses {
+    .move-button {
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
         .text {
-            display: block;
-            margin: 0 10px 0 0;
-            font-size: 18px;
+            display: inline-block;
+            margin-left: 23px;
+            font-weight: 600;
+            font-size: 20px;
             line-height: 26px;
-            font-weight: 500;
-            color: $colorWhite;
-            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.01em;
+            color: $colorGray;
+        }
+    }
 
-            &.caption {
-                font-size: 38px;
-                line-height: 45px;
-                font-weight: 700;
-                text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+    .rh-sections {
+        display: block;
+        position: relative;
+        z-index: 5;
+        margin: 0;
+        background: $colorGrayLight;
+
+        .apartments-content {
+            display: block;
+            position: absolute;
+            z-index: 5;
+            left: 0;
+            right: 0;
+            top: 45px;
+            pointer-events: none;
+            @include mobile {
+                top: 20px;
+            }
+            .subtitle {
+                color: $colorWhite;
+                font-size: 20px;
+                line-height: 33px;
+                letter-spacing: 0.01em;
+                text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+                -webkit-text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+                -moz-text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+            }
+            .title {
+                font-weight: 600;
+                color: $colorWhite;
+                font-size: 46px;
+                line-height: 59px;
+                text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+                -webkit-text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+                -moz-text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+            }
+            .colors {
+                display: flex;
+                flex-direction: column;
+                margin-top: 32px;
                 @include mobile {
-                    font-size: 30px;
-                    line-height: 35px;
+                    margin-top: 0;
+                }
+                .color-item {
+                    display: flex;
+                    align-items: center;
+                    .quad {
+                        width: 27px;
+                        height: 27px;
+                        border-radius: 5px;
+                        margin-right: 20px;
+                        &.quad-1 {
+                            background: #498643;
+                            border: 1px solid #2E4E2B;
+                        }
+                        &.quad-2 {
+                            background: #FFFFFF;
+                            border: 1px solid #253539;
+                        }
+                        &.quad-3 {
+                            background: #DC0042;
+                            border: 1px solid #5F021E;
+                        }
+                    }
+                    .text {
+                        font-weight: 600;
+                        color: $colorWhite;
+                        font-size: 20px;
+                        line-height: 26px;
+                        text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+                        -webkit-text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+                        -moz-text-shadow:0px 1px 0 rgb(37,53,57),0px -1px 0 rgb(37,53,57),1px 0px 0 rgb(37,53,57),-1px 0px 0 rgb(37,53,57),1px 1px 0 rgb(37,53,57),1px -1px 0 rgb(37,53,57),-1px 1px 0 rgb(37,53,57),-1px -1px 0 rgb(37,53,57);
+                    }
+                }
+                .color-item + .color-item {
+                    margin-top: 15px;
+                }
+            }
+            @include desktop-small {
+                .subtitle {
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+                .title {
+                    font-size: 38px;
+                    line-height: 49px;
                 }
             }
         }
-    }
 
 
 
-    .drawing-block {
-        position: relative;
-        z-index: 3;
-        margin: 0;
-        overflow: hidden;
-
-        @include mobile {
-            height: 480px;
-            overflow-x: auto;
-        }
-
-        &:before {
-            content: "";
-            display: block;
-            float: left;
-            padding-top: 45%;
-
-            @include mobile {
-                display: none;
-            }
-        }
-    }
-
-    .drawing-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 999;
-        width: 100%;
-        height: 100%;
-        background: url("../img/common/genplan/fg.png") no-repeat center center;
-    }
-    .drawing {
-        display: block;
-        position: absolute;
-        z-index: 3;
-        left: 50%;
-        top: 50%;
-        margin: 0;
-
-        @include mobile {
+        .drawing-block {
             position: relative;
-            top: 0 !important;
-            left: 0 !important;
-            margin: 0 !important;
-            height: 480px !important;
-        }
-        &.drawing-transparent {
-            z-index: 99;
+            z-index: 3;
+            margin: 0;
+            overflow: hidden;
+
             @include mobile {
-                position: absolute;
+                height: 480px;
+                overflow-x: auto;
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                float: left;
+                padding-top: 45%;
+
+                @include mobile {
+                    display: none;
+                }
             }
         }
-        .item {
+
+        .drawing-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            background: url("../img/common/genplan/fg.png") no-repeat center center;
+        }
+        .drawing {
             display: block;
             position: absolute;
             z-index: 3;
-            left: 100%;
-            top: 100%;
-            cursor: pointer;
+            left: 50%;
+            top: 50%;
+            margin: 0;
 
-            &:after {
-                content: "";
-                display: none;
+            @include mobile {
                 position: relative;
-                z-index: 3;
-                top: -3px;
-                margin: 0 auto;
-                background: url("../img/balloon-bottom.svg") center top no-repeat;
-                background-size: contain;
-                width: 13px;
-                height: 12px;
+                top: 0 !important;
+                left: 0 !important;
+                margin: 0 !important;
+                height: 480px !important;
             }
-
-            .content {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                flex-wrap: wrap;
-                position: relative;
-                z-index: 3;
-                width: 69px;
-                height: 69px;
-                font-size: 30px;
-                line-height: 50px;
-                color: $colorWhite;
-                background: $colorMain;
-                text-align: center;
-                border-radius: 50%;
-                overflow: hidden;
-            }
-
-            .text {
-                display: block;
-                margin: 0;
-                width: 100%;
-                font-size: 12px;
-                line-height: 14px;
-                text-align: center;
-                color: $colorWhite;
-                white-space: normal;
-                word-break: normal;
-
-                .big {
-                    font-size: 24px;
-                    line-height: 28px;
-                    font-weight: 700;
+            &.drawing-transparent {
+                z-index: 99;
+                @include mobile {
+                    position: absolute;
                 }
             }
+            .item {
+                display: block;
+                position: absolute;
+                z-index: 3;
+                left: 100%;
+                top: 100%;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    display: none;
+                    position: relative;
+                    z-index: 3;
+                    top: -3px;
+                    margin: 0 auto;
+                    background: url("../img/balloon-bottom.svg") center top no-repeat;
+                    background-size: contain;
+                    width: 13px;
+                    height: 12px;
+                }
+
+                .content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    position: relative;
+                    z-index: 3;
+                    width: 69px;
+                    height: 69px;
+                    font-size: 30px;
+                    line-height: 50px;
+                    color: $colorWhite;
+                    background: $colorMain;
+                    text-align: center;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+
+                .text {
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+                    font-size: 12px;
+                    line-height: 14px;
+                    text-align: center;
+                    color: $colorWhite;
+                    white-space: normal;
+                    word-break: normal;
+
+                    .big {
+                        font-size: 24px;
+                        line-height: 28px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            polygon {
+                cursor: pointer;
+            }
         }
 
-        polygon {
-            cursor: pointer;
+        @keyframes move-button {
+            from {
+                transform: translateX(-50%);
+            }
+            33% {
+                transform: translateX(-48%);
+            }
+            66% {
+                transform: translateX(-52%);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+
+        .move-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 5;
+            left: 50%;
+            bottom: 17px;
+            margin: 0;
+            padding: 0 10px;
+            height: 32px;
+            background: rgba(0, 0, 0, .8);
+            font-size: 14px;
+            line-height: 1.2em;
+            font-weight: 700;
+            color: $colorWhite;
+            white-space: nowrap;
+            border-radius: 10px;
+            transform: translateX(-50%);
+
+            animation-name: move-button;
+            animation-timing-function: linear;
+            animation-duration: 1.5s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+
+            .icon {
+                margin-right: 9px;
+                font-size: 9px;
+            }
         }
     }
 
-    @keyframes move-button {
-        from {
-            transform: translateX(-50%);
-        }
-        33% {
-            transform: translateX(-48%);
-        }
-        66% {
-            transform: translateX(-52%);
-        }
-        to {
-            transform: translateX(-50%);
-        }
-    }
 
-
-    .move-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        z-index: 5;
-        left: 50%;
-        bottom: 17px;
-        margin: 0;
-        padding: 0 10px;
-        height: 32px;
-        background: rgba(0, 0, 0, .8);
-        font-size: 14px;
-        line-height: 1.2em;
-        font-weight: 700;
-        color: $colorWhite;
-        white-space: nowrap;
-        border-radius: 10px;
-        transform: translateX(-50%);
-
-        animation-name: move-button;
-        animation-timing-function: linear;
-        animation-duration: 1.5s;
-        animation-fill-mode: both;
-        animation-iteration-count: infinite;
-
-        .icon {
-            margin-right: 9px;
-            font-size: 9px;
+    .apartments-content__mobile {
+        padding: 24px 0;
+        .subtitle {
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.02em;
+            color: $colorText;
+        }
+        .title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 39px;
+            color: $colorText;
         }
     }
 }
+
+
 
 /**
 Всплывающее окно на разметке

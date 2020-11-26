@@ -1,6 +1,6 @@
-import * as $                      from 'jquery';
-import { SVG }                     from '@svgdotjs/svg.js';
-import { declOfNum, numberFormat } from '../helpers'
+import * as $ from 'jquery';
+import { SVG } from '@svgdotjs/svg.js';
+import { declOfNum, numberFormat } from '../helpers';
 
 export default class RHSelect {
    constructor($block) {
@@ -30,7 +30,7 @@ export default class RHSelect {
          strokeFill: { color: '#73A756', opacity: 0.7, width: 0 },
          width: 1920,
          height: 930
-      }
+      };
 
       this.drawingTransparentOptions = {
          id: this.$drawingTransparent.attr('id'),
@@ -41,7 +41,7 @@ export default class RHSelect {
          strokeFill: { color: '#fff', opacity: 0, width: 2 },
          width: 1920,
          height: 930
-      }
+      };
 
       this.init();
    }
@@ -56,10 +56,10 @@ export default class RHSelect {
       this.drawingResize();
 
       $(window)
-         .on('mousemove', (e) => {
+         .on('mousemove', e => {
             this.setPopupPosition(e);
          })
-         .on('resize', (e) => {
+         .on('resize', e => {
             this.drawingResize();
             this.initEventsHandler();
          });
@@ -85,10 +85,8 @@ export default class RHSelect {
     * для десктопа и мобильной версии разные события
     */
    initEventsHandler() {
-
       const desktop = this.isDesktop();
       if (desktop !== this.desktop) this.desktop = desktop;
-
 
       this.$block.off('mouseenter', '.item');
       this.$block.off('mouseleave', '.item');
@@ -109,7 +107,6 @@ export default class RHSelect {
                this.handlerClick(this.drawingTransparentItems[id]);
                return false;
             });
-
       } else {
          console.log('initMobile');
          this.$block.on('click', '.item', e => {
@@ -119,7 +116,7 @@ export default class RHSelect {
          });
       }
 
-      this.drawingTransparentItems.forEach((item) => {
+      this.drawingTransparentItems.forEach(item => {
          item.off('click');
          item.off('mouseenter');
          item.off('mouseleave');
@@ -135,7 +132,6 @@ export default class RHSelect {
                .on('click', () => {
                   this.handlerClick(item);
                });
-
          } else {
             console.log('initMobile');
             item.on('click', () => {
@@ -143,8 +139,7 @@ export default class RHSelect {
                return false;
             });
          }
-
-      })
+      });
    }
 
    drawingInit() {
@@ -187,7 +182,7 @@ export default class RHSelect {
       let scale = widthDrawing / 1920 + 0.2;
       if (scale > 1) scale = 1;
       this.$block.find('.item').css({
-         'transform': `translateX(-50%) translateY(-50%) scale(${scale})`
+         transform: `translateX(-50%) translateY(-50%) scale(${scale})`
       });
 
       this.$drawing.css({
@@ -224,17 +219,7 @@ export default class RHSelect {
     * @param {Object} item - данные о секции
     */
    addItemSVG(item = {}) {
-      const {
-         id = null,
-         name = '',
-         nameType = '',
-         status = '',
-         href = '',
-         coords = '',
-         price = '',
-         img = '',
-         type = ''
-      } = item;
+      const { id = null, name = '', nameType = '', status = '', href = '', coords = '', price = '', img = '', type = '' } = item;
 
       this.drawingItems[id] = this.draw.polygon(coords);
 
@@ -259,7 +244,6 @@ export default class RHSelect {
          img,
          type
       });
-
 
       this.drawingTransparentItems[id] = this.drawTranparent.polygon(coords);
       this.drawingTransparentItems[id].fill(this.drawingTransparentOptions.colorBase);
@@ -286,8 +270,6 @@ export default class RHSelect {
       let id = item.data('id');
       let status = item.data('status');
 
-
-
       if (status == '1') {
          this.drawingItems[id].fill(this.drawingOptions.colorFill);
          this.drawingItems[id].stroke(this.drawingOptions.strokeFill);
@@ -298,8 +280,6 @@ export default class RHSelect {
          this.setDataPopup(item);
          this.showPopup();
       }
-
-
    }
 
    /**
@@ -331,8 +311,6 @@ export default class RHSelect {
          window.location.href = item.data('href');
          return false;
       }
-
-
    }
 
    /**
@@ -354,7 +332,7 @@ export default class RHSelect {
     * @returns {boolean}
     */
    isDesktop() {
-      return (window.innerWidth > 1000);
+      return window.innerWidth > 1000;
    }
 
    /**
@@ -371,11 +349,11 @@ export default class RHSelect {
       const tooltipWidth = this.$popupInfo.width() + 15;
 
       //условия, чтобы тултип не ушел за вьюпорт
-      if ( (mouseY + tooltipHeight) > $(window).height()) {
+      if (mouseY + tooltipHeight > $(window).height()) {
          top = top - tooltipHeight;
       }
 
-      if ( (mouseX + tooltipWidth) > $(window).width()) {
+      if (mouseX + tooltipWidth > $(window).width()) {
          left = left - tooltipWidth;
       }
 
@@ -404,7 +382,6 @@ export default class RHSelect {
       if (this.desktop) {
          this.$popupInfo.removeClass('show show-effect');
          this.clearPopup();
-
       } else {
          this.$popupInfo.removeClass('show-effect');
          setTimeout(() => {
@@ -442,7 +419,7 @@ export default class RHSelect {
       const type = item.data('type');
       const id = item.data('id');
 
-      const priceFormated = numberFormat(price)
+      const priceFormated = numberFormat(price);
       const headHTML = `
             <div class="head">
                 <div class="img" style="background-image: url(${img})"></div>

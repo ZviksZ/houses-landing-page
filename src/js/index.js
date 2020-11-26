@@ -4,13 +4,14 @@ import { CustomTabs }                                        from './components/
 import { Effects }                                           from './components/effects';
 import { FeedForm }                                          from './components/feed-form';
 import { initMaskedInput, initMoneyInput, initPlaceholders } from './components/form';
-import { Header }                from './components/header';
-import { HeaderMenu }            from './components/header-menu';
-import { HousesModal }           from './components/houses-modal';
-import { ModalGallery }          from './components/modal-gallery';
-import { ModalWindowFullScreen } from './components/modal-window-fullscreen';
-import { NewsModal }             from './components/news-modal';
-import RHSelect                  from './components/realized-houses';
+import { Header }                                            from './components/header';
+import { HeaderMenu }                                        from './components/header-menu';
+import { HousesModal }                                       from './components/houses-modal';
+import { ModalGallery }                                      from './components/modal-gallery';
+import { ModalWindowFullScreen }                             from './components/modal-window-fullscreen';
+import { NewsModal }                                         from './components/news-modal';
+import { Parallax }                                          from './components/parallax';
+import RHSelect                                              from './components/realized-houses';
 window.jQuery = require('jquery');
 
 $(function() {
@@ -40,6 +41,9 @@ $(function() {
 
    //Генплан, выбор домов
    new RHSelect($('#rh_sections'));
+
+
+   new Parallax();
 
    // инициализация функционала модальных окон
    let modal = new ModalWindowFullScreen();

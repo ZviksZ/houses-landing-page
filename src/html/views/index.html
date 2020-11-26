@@ -14,7 +14,8 @@
             <p class="text color-gray body20">
                 «Александровская роща» — новый загородный комфорт для жителей большого города
             </p>
-            <a href="" class="button">Записаться на просмотр</a>
+            <a href="" class="button" data-open-modal-button="form-modal"
+               data-effect-type="open-modal-fade-effect" data-title="Записаться на просмотр" data-open-form>Записаться на просмотр</a>
         </div>
 
 
@@ -22,7 +23,9 @@
 </section>
 
 
-<section class="section section-video">
+<section class="section section-video section-with-leaf">
+    <img class="parallax_leaf parallax_leaf-1" src="./img/common/leaf1.png" alt="phone" id="parallax_leaf-1" data-top="" data-offset_x="" data-offset_y="" style="">
+
     <div class="container">
         <div class="section-video__wrap">
             <div class="section-video__left">
@@ -37,11 +40,13 @@
                 <p class="body20 text">
                     Коттеджный посёлок «Александровская роща» находится в Волжском районе Самары. Добраться сюда из географического центра города можно всего за 30 минут. Рядом расположен посёлок городского типа Петра Дубрава и лес Дубовый Гай с живописными вековыми деревьями. В нескольких минутах - ТЦ «МЕГА» с его многочисленными магазинами и развлекательной инфраструктурой.
                 </p>
-                <a href="#" class="button">Выбрать дом</a>
+                <a href="#rh_sections" class="button">Выбрать дом</a>
             </div>
         </div>
 
     </div>
+
+    <img class="parallax_leaf parallax_leaf-2" src="./img/common/leaf2.png" alt="phone" id="parallax_leaf-2" data-top="" data-offset_x="" data-offset_y="" style="">
 </section>
 
 <section class="section section-bg section-about">
@@ -71,7 +76,7 @@
                     <p>
                         В первой очереди строительства запланировано более 100 жилых домов с разными метражами и планировками;
                     </p>
-                    <a href="#" class="link custom-link">Выбрать дом</a>
+                    <a href="#rh_sections" class="link custom-link">Выбрать дом</a>
                 </div>
             </div>
             <div class="item">
@@ -131,7 +136,9 @@
     </div>
 </section>
 
-<section class="section section-territory">
+
+
+<section class="section section-territory section-with-leaf">
     <div class="container">
         <h2 class="h2 section-title text-align-center margin-bottom">
             На территории посёлка есть всё необходимое
@@ -172,16 +179,36 @@
             </div>
         </div>
     </div>
+    <img class="parallax_leaf parallax_leaf-3" src="./img/common/leaf3.png" alt="phone" id="parallax_leaf-3" data-top="" data-offset_x="" data-offset_y="" style="">
 </section>
 
-<section class="section section-relized-houses">
-
+<section class="section section-relized-houses section-bg no-padding-top no-padding-bottom">
+    <div class="apartments-content__mobile hide-desktop">
+        <div class="container">
+            <div class="subtitle">Выбери свой дом и участок на карте</div>
+            <div class="title">Генеральный план</div>
+        </div>
+    </div>
     <div id="rh_sections" class="rh-sections">
         <div class="drawing-block" data-drawing_block>
             <div class="apartments-content">
                 <div class="container">
-                    <h2 class="text caption">Выбор квартиры</h2>
-                    <p class="text">Выберите секцию</p>
+                    <div class="subtitle hide-mobile">Выбери свой дом и участок на карте</div>
+                    <div class="title hide-mobile">Генеральный план</div>
+                    <div class="colors">
+                        <div class="color-item">
+                            <span class="quad quad-1"></span>
+                            <span class="text">В продаже</span>
+                        </div>
+                        <div class="color-item">
+                            <span class="quad quad-2"></span>
+                            <span class="text">Забронировано</span>
+                        </div>
+                        <div class="color-item">
+                            <span class="quad quad-3"></span>
+                            <span class="text">Продано</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="rh_sections_drawing" class="drawing" data-drawing="" data-image="./img/common/genplan/bg.jpg"
@@ -189,10 +216,10 @@
 
             <div id="rh_sections_drawing-transparent" class="drawing drawing-transparent" data-drawing-transparent="" data-image="./img/common/genplan/fg.png"></div>
         </div>
-        <div class="move-button hide-desktop" data-move_button>
-            <i class="icon icon-move"></i>
-            Перемещайте генплан
-        </div>
+    </div>
+    <div class="move-button hide-desktop" data-move_button>
+        <img src="./img/common/genplan/move.svg" alt="">
+        <span class="text">Перемещайте генплан</span>
     </div>
 </section>
 
