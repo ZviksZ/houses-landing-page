@@ -7,6 +7,7 @@ import { initMaskedInput, initMoneyInput, initPlaceholders } from './components/
 import { Header }                                            from './components/header';
 import { HeaderMenu }                                        from './components/header-menu';
 import { HousesModal }                                       from './components/houses-modal';
+import { InfrastructureMap }                                 from './components/infrastructure';
 import { ModalGallery }                                      from './components/modal-gallery';
 import { ModalWindowFullScreen }                             from './components/modal-window-fullscreen';
 import { NewsModal }                                         from './components/news-modal';
@@ -42,8 +43,11 @@ $(function() {
    //Генплан, выбор домов
    new RHSelect($('#rh_sections'));
 
-
+   //Паралакс эффект
    new Parallax();
+
+   //Карта инфраструктуры
+   new InfrastructureMap();
 
    // инициализация функционала модальных окон
    let modal = new ModalWindowFullScreen();

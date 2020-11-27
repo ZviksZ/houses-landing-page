@@ -1,9 +1,16 @@
 .house-modal {
+    overflow-x: hidden !important;
     .modal-content {
         padding: 0;
-
+        @include mobile {
+            margin-top: 33px !important;
+        }
         .close {
             top: 10px;
+            @include mobile {
+                top: 0;
+                padding-top: 5px;
+            }
         }
         .house-modal__wrap {
             display: flex;
@@ -129,17 +136,91 @@
                     }
                 }
                 .house-modal__price {
+                    position: relative;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     flex-wrap: wrap;
                     padding: 25px 0;
+                    &:before, &:after {
+                        position: absolute;
+                        left: -37px;
+                        bottom: 0;
+                        display: block;
+                        height: 1px;
+                        width: 200%;
+                        content: '';
+                        background: #C8D0D2;
+                        opacity: 0.5;
+                    }
+                    &:before {
+                        top: 0;
+                    }
+                    &:after {
+                        bottom: 0;
+                    }
                     .price {
                         font-weight: 600;
                         font-size: 36px;
                         line-height: 46px;
                         letter-spacing: 0.01em;
                         color: $colorText;
+                    }
+                    @include only-mobile {
+                        .button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            @include mobile {
+                flex-wrap: wrap;
+                .house-modal__slider-wrap {
+                    width: 100%;
+                    max-width: 100%;
+                    padding-right: 0;
+                    .title {
+                        max-width: 80%;
+                    }
+                }
+                .house-modal__info {
+                    width: 100%;
+                    max-width: 100%;
+                    min-width: auto;
+                    padding-left: 0;
+                    padding-bottom: 30px;
+                    &:before {
+                        display: none;
+                    }
+                    .house-modal__icons {
+                        display: flex;
+                        align-items: flex-start;
+                        margin: 25px 0 17px;
+                        .item {
+                            align-items: center;
+                            width: 33.3333333333333%;
+                        }
+                        .item + .item {
+                            margin-left: 0;
+                        }
+                    }
+                    .house-modal__list {
+                        columns: 1;
+                    }
+                    .house-modal__price {
+                        justify-content: center;
+                        .price {
+                            width: 100%;
+                            margin-bottom: 12px !important;
+                            text-align: center;
+                        }
+                        &:before {
+                            display: none;
+                        }
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
             }

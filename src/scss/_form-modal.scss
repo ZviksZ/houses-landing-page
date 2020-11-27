@@ -1,5 +1,7 @@
 .form-modal {
     background: rgba(37,53,57,0.9);
+    @include mobile {
+    }
     &.fade-in-show {
         z-index: 10000 !important;
     }
@@ -13,25 +15,40 @@
         .close {
             top: 2px;
             z-index: 1001;
+            @include mobile {
+                right: 17px;
+            }
         }
         #form-modal__title {
             margin-bottom: 26px !important;
         }
+
         .form-modal__footer {
             display: flex;
             margin-top: 30px;
-            @include only-mobile {
-                flex-wrap: wrap;
-                .button {
-                    margin-bottom: 10px;
-                }
-            }
             .button {
                 white-space: nowrap;
                 margin: 0;
             }
             .text {
                 margin-left: 36px;
+            }
+            @include only-mobile {
+                flex-wrap: wrap;
+                .button {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                .text {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @include mobile {
+            padding: 17px 0;
+            .h2 {
+                max-width: 80%;
             }
         }
     }

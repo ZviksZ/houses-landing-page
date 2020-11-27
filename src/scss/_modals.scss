@@ -122,6 +122,9 @@
                 background: rgba(37,53,57,1);
             }
         }
+        @include mobile {
+            padding-top: 5px;
+        }
     }
 
     .close-btn {

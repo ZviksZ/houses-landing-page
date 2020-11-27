@@ -1,0 +1,205 @@
+
+.section-infrastructure {
+    .infrastructure-block {
+        overflow: hidden;
+    }
+    .inf-top {
+        display: flex;
+        margin-top: 65px;
+        &:before {
+            float: left;
+            display: block;
+            content: '';
+            padding-top: 42%;
+            @include desktop-small {
+                padding-top: 38%;
+            }
+        }
+        .inf-top__nav-wrap {
+            position: relative;
+            flex: 376px 0 0;
+        }
+        .inf-top__nav {
+            width: 100%;
+            height: 100%;
+            padding: 46px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: #F1F1F1;
+            a {
+                position: relative;
+                font-size: 20px;
+                line-height: 33px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $colorText;
+                transition: 0.1s ease;
+                @include desktop {
+                    &:hover {
+                        opacity: 1;
+                        color: $colorMainActive;
+                    }
+                }
+                &.active {
+                    color: $colorMain;
+                    padding-left: 40px;
+                    &:before {
+                        font-family: "aleksandrovskaya" !important;
+                        font-style: normal !important;
+                        font-weight: normal !important;
+                        font-variant: normal !important;
+                        text-transform: none !important;
+                        speak: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        position: absolute;
+                        top: 4.5px;
+                        left: 0;
+                        color: $colorMain;
+                        display: block;
+                        content: "\61";
+                        font-size: 20px;
+                    }
+                }
+            }
+            a + a {
+                margin-top: 20px;
+            }
+        }
+        .inf-top__map {
+            width: calc(100% - 376px);
+            .label {
+                font-family: $fontBase;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 0.02em;
+                color: #000000;
+                display: inline-block;
+                transform: translateX(calc(50% + 16px)) translateY(1px);
+            }
+        }
+        .inf-top__selected {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 51px;
+            width: 100%;
+            background: #F1F1F1;
+            padding: 0 19px;
+            span {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $colorText;
+            }
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            .inf-top__nav-wrap {
+                flex: 100% 0 0;
+                margin-bottom: 21px;
+            }
+            .inf-top__nav {
+                display: none;
+                position: absolute;
+                top: 51px;
+                left: 0;
+                width: 100%;
+                height: auto;
+                background: $colorWhite;
+                z-index: 88;
+                padding: 5px 0;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+                border: 1px solid #F1F1F1;
+                border-top: 0px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    height: 51px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.01em;
+                    text-transform: uppercase;
+                    color: $colorText;
+                    padding: 0 19px;
+                    &.active {
+                        background: #F1F1F1;
+                        color: $colorText;
+                        padding: 0 19px;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+                a + a {
+                    border-top: 1px solid #F1F1F1;
+                    margin-top: 0;
+                }
+                &.inf-top__nav-show {
+                    display: block;
+                }
+            }
+            .inf-top__map {
+                width: 100%;
+                &:before {
+                    float: left;
+                    content: '';
+                    display: block;
+                    padding-top: 55%;
+                }
+            }
+            &:before {
+                display: none;
+            }
+        }
+        @include only-mobile {
+            .inf-top__map {
+                &:before {
+                    padding-top: 107%;
+                }
+            }
+        }
+    }
+    .inf-bottom {
+        display: flex;
+        margin: 40px -16px 0;
+        .part {
+            width: calc(50% - 32px);
+            margin: 0 16px;
+        }
+        @include mobile {
+            margin: 40px 0 0;
+            flex-wrap: wrap;
+            .part {
+                width: 100%;
+                margin: 0;
+                &:first-child {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .inf-bottom__list {
+            list-style: none;
+            li {
+                padding-left: 40px;
+                &:before {
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    display: block;
+                    width: 22px;
+                    height: 22px;
+                    content: '';
+                    background: url("../img/infrastructure/parking.svg") no-repeat center center;
+                    -webkit-background-size: contain;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

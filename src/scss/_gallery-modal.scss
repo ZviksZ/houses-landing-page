@@ -8,7 +8,8 @@
         padding: 0 45px;
         @include mobile {
             height: auto;
-            padding: 115px 17px 80px !important;
+            padding: 65px 0 80px !important;
+            margin-top: 33px !important;
         }
         .gallery-modal__arrow {
             position: absolute;
@@ -33,6 +34,15 @@
                 &:hover {
                     opacity: 1;
                     background: rgba(37,53,57,1);
+                }
+            }
+            @include mobile {
+                top: calc(50% - 15px);
+                width: 30px;
+                height: 30px;
+                border-radius: 10px;
+                i {
+                    font-size: 10px;
                 }
             }
             &.swiper-button-next {
