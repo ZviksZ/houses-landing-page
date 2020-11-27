@@ -282,7 +282,7 @@ export class InfrastructureMap {
          map: this.$map,
          category: 'all',
          icon: {
-            url: '/img/infrastructure/logo-marker.svg',
+            url: './img/infrastructure/logo-marker.svg',
             scaledSize: new google.maps.Size(34, 37)
          }
       });
@@ -294,7 +294,7 @@ export class InfrastructureMap {
          map: this.$map,
          category: 'all',
          icon: {
-            url: '/img/infrastructure/parking-right.svg',
+            url: './img/infrastructure/parking-right.svg',
             scaledSize: new google.maps.Size(32, 22)
          }
       });
@@ -306,7 +306,7 @@ export class InfrastructureMap {
          map: this.$map,
          category: 'all',
          icon: {
-            url: '/img/infrastructure/parking-left.svg',
+            url: './img/infrastructure/parking-left.svg',
             scaledSize: new google.maps.Size(32, 22)
          }
       });
@@ -332,7 +332,7 @@ export class InfrastructureMap {
                   map: this.$map,
                   category: type,
                   icon: {
-                     url: '/img/infrastructure/marker.png',
+                     url: './img/infrastructure/marker.png',
                      scaledSize: new google.maps.Size(19, 19)
                   },
                   label: {
