@@ -57,6 +57,23 @@ $(function() {
    initPlaceholders();
    initMoneyInput();
 
+   $(`a[href*="#"]`).click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+         var $target = $(this.hash);
+         $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+         if ($target.length) {
+            var targetOffset = $target.offset().top - $('#header').height();
+            $('html,body').animate({scrollTop: targetOffset}, 1000);
+            return false;
+         }
+      }
+   });
+
+   $('.header-menu .header-menu__nav a').on('click', () => {
+      $('html').removeClass('header-menu-open');
+   })
+
    setTimeout(() => {
       $('.preloader').addClass('preloader-hide');
    }, 200);
