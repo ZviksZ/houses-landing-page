@@ -479,6 +479,7 @@
                 letter-spacing: 0.02em;
                 color: $colorMain;
                 font-weight: 600;
+                white-space: nowrap;
             }
         }
         @include mobile {
