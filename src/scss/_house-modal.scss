@@ -2,18 +2,22 @@
     overflow-x: hidden !important;
     .modal-content {
         padding: 0;
+        height: auto;
         @include mobile {
             margin-top: 33px !important;
         }
         .close {
+            position: sticky;
             top: 10px;
+            padding-top: 5px;
+            margin-left: auto;
             @include mobile {
-                top: 0;
-                padding-top: 5px;
+                top: 33px;
             }
         }
         .house-modal__wrap {
             display: flex;
+            margin-top: -40px;
             .house-modal__slider-wrap {
                 width: 100%;
                 max-width: calc(100% - 636px);

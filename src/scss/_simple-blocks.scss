@@ -372,11 +372,13 @@
             }
         }
         @include mobile {
+            margin-top: 45px;
             .item {
                 width: calc(25% - 2px);
             }
         }
         @include only-mobile {
+            margin-top: 30px;
             .item {
                 width: calc(33.3333333333333333% - 2px);
             }
@@ -422,7 +424,7 @@
             }
         }
         @include only-mobile {
-            margin: 46px 0 0;
+            margin: 30px 0 0;
             .item {
                 width: 100%;
                 margin-left: 0;
@@ -438,12 +440,25 @@
         margin: 0 auto;
     }
     .modal-content {
+        height: auto;
+        .close {
+            position: sticky;
+            top: 33px;
+            margin-left: auto;
+        }
+        .news-container {
+            margin-top: -40px;
+        }
         @include mobile {
             margin-top: 33px !important;
             padding: 0 0 30px;
             .close {
-                top: -6px;
+                position: sticky;
+                top: 33px;
+                margin-left: auto;
+                padding-top: 5px;
             }
+
         }
     }
 }

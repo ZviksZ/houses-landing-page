@@ -21,7 +21,7 @@ export default class RHSelect {
       this.drawingOptions = {
          id: this.$drawing.attr('id'),
          image: this.$drawing.attr('data-image'),
-         colorBase: 'rgba(94, 134, 70, 0.7)',
+         colorBase: 'rgba(80, 244, 97, 0.7)',
          colorBaseSold: 'rgba(239, 27, 52, 0.4)',
          colorBaseReserve: 'rgba(255, 255, 255, 0.7)',
          colorFill: 'rgba(115, 167, 68, 0.7)',

@@ -18,7 +18,7 @@ export class HousesModal {
    };
 
    initModalOpen = () => {
-      $('a[data-house]').on('click', e => {
+      $('body').on('click', 'a[data-house]', e => {
          let currentHouse = $(e.currentTarget).attr('data-house');
 
          this.$modal.find('.modal-content').addClass('hide');

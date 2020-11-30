@@ -1,6 +1,24 @@
 /**
-Блок Выбор секции
+Блок Генплан
  */
+
+@keyframes move-button {
+    from {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-15%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    66% {
+        transform: translateX(15%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 .section-relized-houses {
     .move-button {
         padding: 30px 0;
@@ -16,6 +34,15 @@
             line-height: 26px;
             letter-spacing: 0.01em;
             color: $colorGray;
+        }
+
+        img {
+            display: block;
+            animation-name: move-button;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
         }
     }
 
@@ -71,7 +98,7 @@
                         border-radius: 5px;
                         margin-right: 20px;
                         &.quad-1 {
-                            background: #498643;
+                            background: #50F461;
                             border: 1px solid #2E4E2B;
                         }
                         &.quad-2 {
@@ -228,54 +255,36 @@
             }
         }
 
-        @keyframes move-button {
-            from {
-                transform: translateX(-50%);
-            }
-            33% {
-                transform: translateX(-48%);
-            }
-            66% {
-                transform: translateX(-52%);
-            }
-            to {
-                transform: translateX(-50%);
-            }
-        }
 
-
-        .move-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            z-index: 5;
-            left: 50%;
-            bottom: 17px;
-            margin: 0;
-            padding: 0 10px;
-            height: 32px;
-            background: rgba(0, 0, 0, .8);
-            font-size: 14px;
-            line-height: 1.2em;
-            font-weight: 700;
-            color: $colorWhite;
-            white-space: nowrap;
-            border-radius: 10px;
-            transform: translateX(-50%);
-
-            animation-name: move-button;
-            animation-timing-function: linear;
-            animation-duration: 1.5s;
-            animation-fill-mode: both;
-            animation-iteration-count: infinite;
-
-            .icon {
-                margin-right: 9px;
-                font-size: 9px;
-            }
-        }
     }
+
+   /*
+    .move-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        bottom: 17px;
+        margin: 0;
+        padding: 0 10px;
+        height: 32px;
+        background: rgba(0, 0, 0, .8);
+        font-size: 14px;
+        line-height: 1.2em;
+        font-weight: 700;
+        color: $colorWhite;
+        white-space: nowrap;
+        border-radius: 10px;
+        transform: translateX(-50%);
+
+
+        .icon {
+            margin-right: 9px;
+            font-size: 9px;
+        }
+    }*/
 
 
     .apartments-content__mobile {
@@ -294,6 +303,7 @@
         }
     }
 }
+
 
 
 

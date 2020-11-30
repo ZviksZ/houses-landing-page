@@ -6,6 +6,12 @@
     .inf-top {
         display: flex;
         margin-top: 65px;
+        @include mobile {
+            margin-top: 45px;
+        }
+        @include only-mobile {
+            margin-top: 25px;
+        }
         &:before {
             float: left;
             display: block;
