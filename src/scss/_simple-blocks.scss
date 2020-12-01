@@ -482,32 +482,32 @@
     &.parallax_leaf-1 {
         max-width: 307px;
         top: -70px;
-        left: -15px;
+        left: -125px;
     }
     &.parallax_leaf-2 {
         max-width: 240px;
-        right: -20px;
+        right: -125px;
         bottom: -40px;
     }
     &.parallax_leaf-3 {
         max-width: 135px;
-        left: -10px;
+        left: -40px;
         bottom: -15px;
     }
     @include desktop-small {
         &.parallax_leaf-1 {
             max-width: 207px;
             top: -20px;
-            left: -25px;
+            left: -125px;
         }
         &.parallax_leaf-2 {
             max-width: 140px;
-            right: -30px;
+            right: -125px;
             bottom: -30px;
         }
         &.parallax_leaf-3 {
             max-width: 75px;
-            left: -10px;
+            left: -50px;
             bottom: -15px;
         }
     }

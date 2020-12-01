@@ -1,9 +1,14 @@
 .house-modal {
-    overflow-x: hidden !important;
+    overflow: hidden;
+    @include mobile {
+        overflow: auto;
+    }
     .modal-content {
-        padding: 0;
-        height: auto;
+        height: 100%;
+        margin: 0 auto !important;
+        padding: 85px 0 0;
         @include mobile {
+            padding-top: 0;
             margin-top: 33px !important;
         }
         .close {
@@ -18,10 +23,14 @@
         .house-modal__wrap {
             display: flex;
             margin-top: -40px;
+            height: 100%;
             .house-modal__slider-wrap {
                 width: 100%;
                 max-width: calc(100% - 636px);
                 padding-right: 43px;
+                @include desktop-small {
+                    padding-right: 18px;
+                }
                 .house-modal__slider {
                     overflow: hidden;
                 }
@@ -73,6 +82,15 @@
                 max-width: 636px;
                 min-width: 636px;
                 padding-left: 37px;
+                overflow-x: hidden !important;
+                overflow-y: auto !important;
+                padding-bottom: 50px;
+                &::-webkit-scrollbar { width: 0; }
+                & { -ms-overflow-style: none; }
+                & { overflow: -moz-scrollbars-none; }
+                @include desktop-small {
+                    padding-left: 16px;
+                }
                 &:before {
                     position: absolute;
                     top: -85px;
