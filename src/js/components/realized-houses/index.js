@@ -307,7 +307,6 @@ export default class RHSelect {
    handlerClick(item) {
       let status = item.data('status');
       let type = item.data('type');
-      console.log(type)
 
       if (status == '1') {
          $('.section-houses__list .item[data-house="' + type + '"]').click()

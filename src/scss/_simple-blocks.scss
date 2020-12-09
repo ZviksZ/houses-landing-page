@@ -466,6 +466,16 @@
 
         }
     }
+    .section-photo__list {
+        .item {
+            width: calc(50% - 2px);
+        }
+        @include only-mobile {
+            .item {
+                width: calc(100% - 2px);
+            }
+        }
+    }
 }
 .section-with-leaf {
     overflow: visible !important;
