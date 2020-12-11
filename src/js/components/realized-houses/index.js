@@ -436,7 +436,7 @@ export default class RHSelect {
 
       const buttonHTML = `
             <div class="popup__footer text-align-center hide-desktop">
-                <a href="${href}" data-open-modal-button="house-modal"
+                <a href="${href || '#'}" data-open-modal-button="house-modal"
                data-effect-type="open-modal-fade-effect" data-house="${type}" class="button">Подробнее</a>                
                 <a href="#" class="popup__footer-close" data-close-popup-info>Закрыть</a>
             </div>
