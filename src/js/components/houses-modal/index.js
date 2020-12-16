@@ -45,6 +45,10 @@ export class HousesModal {
          pagination: {
             el: '.modal-content[data-house="' + currentHouse + '"] .swiper-pagination',
             clickable: true
+         },
+         navigation: {
+            nextEl: '.modal-content[data-house="' + currentHouse + '"] .swiper-button-next',
+            prevEl: '.modal-content[data-house="' + currentHouse + '"] .swiper-button-prev'
          }
       });
    };

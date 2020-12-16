@@ -25,13 +25,33 @@
             margin-top: -40px;
             height: 100%;
             .house-modal__slider-wrap {
+                position: relative;
                 width: 100%;
                 max-width: calc(100% - 636px);
                 padding-right: 43px;
                 @include desktop-small {
                     padding-right: 18px;
                 }
+                .gallery-modal__arrow {
+                    background: rgba(37,53,57,1);
+                    &.swiper-button-disabled {
+                        opacity: 0.6;
+                    }
+                }
+                .swiper-button-next {
+                    right: 15px;
+                    @include mobile {
+                        right: 5px;
+                    }
+                }
+                .swiper-button-prev {
+                    left: 15px;
+                    @include mobile {
+                        left: 5px;
+                    }
+                }
                 .house-modal__slider {
+                    position: relative;
                     overflow: hidden;
                 }
                 .swiper-pagination {

@@ -1,3 +1,54 @@
+.gallery-modal__arrow {
+    position: absolute;
+    top: calc(50% - 15px);
+    color: $colorText;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    font-size: 40px;
+    transition: .1s linear;
+    background: rgba(37,53,57,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 7;
+    i {
+        font-size: 15px;
+        color: $colorWhite;
+    }
+    @include desktop {
+        &:hover {
+            opacity: 1;
+            background: rgba(37,53,57,1);
+        }
+    }
+    @include mobile {
+        top: calc(50% - 15px);
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        i {
+            font-size: 10px;
+        }
+    }
+    &.swiper-button-next {
+        right: 0;
+        padding-left: 2px;
+    }
+    &.swiper-button-prev {
+        left: 0;
+        padding-right: 2px;
+        img {
+            display: block;
+            transform: rotate(180deg);
+        }
+    }
+    &.swiper-button-disabled {
+        opacity: 0.4;
+    }
+}
+
 .gallery-modal {
     .modal-content {
         position: relative;
@@ -10,56 +61,6 @@
             height: auto;
             padding: 65px 0 80px !important;
             margin-top: 33px !important;
-        }
-        .gallery-modal__arrow {
-            position: absolute;
-            top: calc(50% - 15px);
-            color: $colorText;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 14px;
-            font-size: 40px;
-            transition: .1s linear;
-            background: rgba(37,53,57,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 7;
-            i {
-                font-size: 15px;
-                color: $colorWhite;
-            }
-            @include desktop {
-                &:hover {
-                    opacity: 1;
-                    background: rgba(37,53,57,1);
-                }
-            }
-            @include mobile {
-                top: calc(50% - 15px);
-                width: 30px;
-                height: 30px;
-                border-radius: 10px;
-                i {
-                    font-size: 10px;
-                }
-            }
-            &.swiper-button-next {
-                right: 0;
-                padding-left: 2px;
-            }
-            &.swiper-button-prev {
-                left: 0;
-                padding-right: 2px;
-                img {
-                    display: block;
-                    transform: rotate(180deg);
-                }
-            }
-            &.swiper-button-disabled {
-                opacity: 0.4;
-            }
         }
         .gallery-modal__slider {
             width: 100%;
